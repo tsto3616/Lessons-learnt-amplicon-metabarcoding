@@ -1,0 +1,153 @@
+This is cutadapt 4.0 with Python 3.9.12
+Command line parameters: -g ACGTCTGGTTCAGGGTTGTT -a TACCCGCTGAACTTAAGCAT -G ATGCTTAAGTTCAGCGGGTA -A AACAACCCTGAACCAGACGT -n 2 --discard-untrimmed -o C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/cutadapt/EF017L-11_S155_L001_R1_001.fastq.gz -p C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/cutadapt/EF017L-11_S155_L001_R2_001.fastq.gz C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/EF017L-11_S155_L001_R1_001.fastq.gz C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/EF017L-11_S155_L001_R2_001.fastq.gz
+Processing paired-end reads on 1 core ...
+Finished in 3.53 s (68 µs/read; 0.88 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:             51,948
+  Read 1 with adapter:                  51,833 (99.8%)
+  Read 2 with adapter:                  50,688 (97.6%)
+
+== Read fate breakdown ==
+Pairs discarded as untrimmed:            1,307 (2.5%)
+Pairs written (passing filters):        50,641 (97.5%)
+
+Total basepairs processed:    26,020,825 bp
+  Read 1:    13,012,831 bp
+  Read 2:    13,007,994 bp
+Total written (filtered):     23,194,985 bp (89.1%)
+  Read 1:    11,604,910 bp
+  Read 2:    11,590,075 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: ACGTCTGGTTCAGGGTTGTT; Type: regular 5'; Length: 20; Trimmed: 51831 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	3	811.7	0	3
+11	1	0.0	1	0 1
+15	2	0.0	1	1 1
+16	1	0.0	1	0 1
+17	3	0.0	1	1 2
+18	23	0.0	1	3 5 15
+19	494	0.0	1	42 414 38
+20	16094	0.0	2	14885 1151 58
+21	11893	0.0	2	11022 830 41
+22	11140	0.0	2	10225 886 29
+23	12067	0.0	2	11487 559 21
+24	107	0.0	2	64 40 3
+25	3	0.0	2	3
+
+
+=== First read: Adapter 2 ===
+
+Sequence: TACCCGCTGAACTTAAGCAT; Type: regular 3'; Length: 20; Trimmed: 29 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Bases preceding removed adapters:
+  A: 6.9%
+  C: 69.0%
+  G: 10.3%
+  T: 13.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	27	811.7	0	27
+4	1	202.9	0	1
+59	1	0.0	2	1
+
+
+=== Second read: Adapter 3 ===
+
+Sequence: ATGCTTAAGTTCAGCGGGTA; Type: regular 5'; Length: 20; Trimmed: 50647 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	35	811.7	0	35
+4	2	202.9	0	2
+7	1	3.2	0	1
+12	6	0.0	1	5 1
+13	5	0.0	1	3 2
+14	2	0.0	1	1 1
+15	3	0.0	1	2 1
+16	2	0.0	1	1 1
+17	7	0.0	1	2 5
+18	31	0.0	1	4 5 22
+19	488	0.0	1	20 390 78
+20	15391	0.0	2	11786 3266 339
+21	11782	0.0	2	10753 930 99
+22	9288	0.0	2	8480 731 77
+23	13098	0.0	2	11495 1489 114
+24	262	0.0	2	121 129 12
+25	3	0.0	2	1 0 2
+38	1	0.0	2	1
+43	1	0.0	2	0 1
+46	1	0.0	2	0 1
+47	7	0.0	2	3 4
+48	3	0.0	2	2 0 1
+49	6	0.0	2	2 2 2
+50	7	0.0	2	5 1 1
+51	3	0.0	2	0 0 3
+52	4	0.0	2	0 3 1
+53	10	0.0	2	0 5 5
+54	5	0.0	2	0 3 2
+55	6	0.0	2	0 2 4
+56	8	0.0	2	0 3 5
+57	12	0.0	2	1 3 8
+58	10	0.0	2	1 1 8
+59	17	0.0	2	0 7 10
+60	19	0.0	2	1 8 10
+61	23	0.0	2	2 12 9
+62	25	0.0	2	5 11 9
+63	12	0.0	2	1 6 5
+64	22	0.0	2	4 7 11
+65	17	0.0	2	2 6 9
+66	13	0.0	2	2 2 9
+67	6	0.0	2	0 2 4
+68	2	0.0	2	0 2
+79	1	0.0	2	0 0 1
+
+
+=== Second read: Adapter 4 ===
+
+Sequence: AACAACCCTGAACCAGACGT; Type: regular 3'; Length: 20; Trimmed: 292 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Bases preceding removed adapters:
+  A: 83.2%
+  C: 7.9%
+  G: 7.5%
+  T: 1.4%
+  none/other: 0.0%
+WARNING:
+    The adapter is preceded by 'A' extremely often.
+    The provided adapter sequence could be incomplete at its 5' end.
+    Ignore this warning when trimming primers.
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	42	811.7	0	42
+4	216	202.9	0	216
+5	34	50.7	0	34
+
+
+WARNING:
+    One or more of your adapter sequences may be incomplete.
+    Please see the detailed output above.

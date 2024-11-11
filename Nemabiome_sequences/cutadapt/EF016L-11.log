@@ -1,0 +1,158 @@
+This is cutadapt 4.0 with Python 3.9.12
+Command line parameters: -g ACGTCTGGTTCAGGGTTGTT -a TACCCGCTGAACTTAAGCAT -G ATGCTTAAGTTCAGCGGGTA -A AACAACCCTGAACCAGACGT -n 2 --discard-untrimmed -o C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/cutadapt/EF016L-11_S141_L001_R1_001.fastq.gz -p C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/cutadapt/EF016L-11_S141_L001_R2_001.fastq.gz C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/EF016L-11_S141_L001_R1_001.fastq.gz C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/EF016L-11_S141_L001_R2_001.fastq.gz
+Processing paired-end reads on 1 core ...
+Finished in 2.23 s (56 µs/read; 1.07 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:             39,712
+  Read 1 with adapter:                  39,577 (99.7%)
+  Read 2 with adapter:                  38,964 (98.1%)
+
+== Read fate breakdown ==
+Pairs discarded as untrimmed:              803 (2.0%)
+Pairs written (passing filters):        38,909 (98.0%)
+
+Total basepairs processed:    19,917,370 bp
+  Read 1:     9,964,319 bp
+  Read 2:     9,953,051 bp
+Total written (filtered):     17,845,992 bp (89.6%)
+  Read 1:     8,932,108 bp
+  Read 2:     8,913,884 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: ACGTCTGGTTCAGGGTTGTT; Type: regular 5'; Length: 20; Trimmed: 39579 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	1	620.5	0	1
+12	4	0.0	1	3 1
+13	1	0.0	1	1
+16	1	0.0	1	0 1
+17	2	0.0	1	0 2
+18	23	0.0	1	1 10 12
+19	373	0.0	1	31 309 33
+20	11949	0.0	2	11023 885 41
+21	8988	0.0	2	8193 752 43
+22	8712	0.0	2	7858 815 39
+23	9417	0.0	2	8891 507 19
+24	107	0.0	2	53 47 7
+49	1	0.0	2	0 0 1
+
+
+=== First read: Adapter 2 ===
+
+Sequence: TACCCGCTGAACTTAAGCAT; Type: regular 3'; Length: 20; Trimmed: 18 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Bases preceding removed adapters:
+  A: 11.1%
+  C: 11.1%
+  G: 61.1%
+  T: 16.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	3	620.5	0	3
+19	1	0.0	1	0 1
+20	1	0.0	2	1
+22	4	0.0	2	1 2 1
+23	7	0.0	2	7
+68	2	0.0	2	2
+
+
+=== Second read: Adapter 3 ===
+
+Sequence: ATGCTTAAGTTCAGCGGGTA; Type: regular 5'; Length: 20; Trimmed: 38953 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	8	620.5	0	8
+4	4	155.1	0	4
+8	1	0.6	0	1
+9	1	0.2	0	1
+11	4	0.0	1	4
+12	2	0.0	1	1 1
+13	2	0.0	1	0 2
+14	2	0.0	1	0 2
+15	2	0.0	1	1 1
+16	2	0.0	1	0 2
+17	8	0.0	1	6 2
+18	21	0.0	1	2 2 17
+19	419	0.0	1	26 328 65
+20	11487	0.0	2	8616 2548 323
+21	9004	0.0	2	8143 795 66
+22	7233	0.0	2	6529 637 67
+23	10332	0.0	2	9057 1167 108
+24	277	0.0	2	127 143 7
+25	2	0.0	2	0 1 1
+45	1	0.0	2	0 0 1
+47	2	0.0	2	1 1
+48	5	0.0	2	3 1 1
+49	5	0.0	2	3 1 1
+50	6	0.0	2	4 0 2
+52	1	0.0	2	0 0 1
+53	3	0.0	2	0 0 3
+54	4	0.0	2	0 1 3
+55	5	0.0	2	1 0 4
+56	8	0.0	2	0 1 7
+57	3	0.0	2	0 2 1
+58	9	0.0	2	0 5 4
+59	11	0.0	2	0 3 8
+60	11	0.0	2	2 5 4
+61	18	0.0	2	0 8 10
+62	18	0.0	2	4 2 12
+63	10	0.0	2	3 4 3
+64	8	0.0	2	0 4 4
+65	7	0.0	2	1 2 4
+66	4	0.0	2	0 1 3
+67	3	0.0	2	1 0 2
+
+
+=== Second read: Adapter 4 ===
+
+Sequence: AACAACCCTGAACCAGACGT; Type: regular 3'; Length: 20; Trimmed: 313 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Bases preceding removed adapters:
+  A: 88.2%
+  C: 0.6%
+  G: 4.2%
+  T: 7.0%
+  none/other: 0.0%
+WARNING:
+    The adapter is preceded by 'A' extremely often.
+    The provided adapter sequence could be incomplete at its 5' end.
+    Ignore this warning when trimming primers.
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	12	620.5	0	12
+4	269	155.1	0	269
+5	15	38.8	0	15
+11	1	0.0	1	0 1
+20	4	0.0	2	4
+21	4	0.0	2	4
+22	4	0.0	2	4
+23	4	0.0	2	4
+
+
+WARNING:
+    One or more of your adapter sequences may be incomplete.
+    Please see the detailed output above.

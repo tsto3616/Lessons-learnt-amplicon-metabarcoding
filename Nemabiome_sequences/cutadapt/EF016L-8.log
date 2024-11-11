@@ -1,0 +1,165 @@
+This is cutadapt 4.0 with Python 3.9.12
+Command line parameters: -g ACGTCTGGTTCAGGGTTGTT -a TACCCGCTGAACTTAAGCAT -G ATGCTTAAGTTCAGCGGGTA -A AACAACCCTGAACCAGACGT -n 2 --discard-untrimmed -o C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/cutadapt/EF016L-8_S151_L001_R1_001.fastq.gz -p C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/cutadapt/EF016L-8_S151_L001_R2_001.fastq.gz C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/EF016L-8_S151_L001_R1_001.fastq.gz C:/Users/tsto3616/Lessons-learnt-amplicon-metabarcoding/Nemabiome_sequences/EF016L-8_S151_L001_R2_001.fastq.gz
+Processing paired-end reads on 1 core ...
+Finished in 2.52 s (59 µs/read; 1.01 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:             42,584
+  Read 1 with adapter:                  42,483 (99.8%)
+  Read 2 with adapter:                  41,770 (98.1%)
+
+== Read fate breakdown ==
+Pairs discarded as untrimmed:              878 (2.1%)
+Pairs written (passing filters):        41,706 (97.9%)
+
+Total basepairs processed:    21,359,568 bp
+  Read 1:    10,685,648 bp
+  Read 2:    10,673,920 bp
+Total written (filtered):     19,129,338 bp (89.6%)
+  Read 1:     9,574,474 bp
+  Read 2:     9,554,864 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: ACGTCTGGTTCAGGGTTGTT; Type: regular 5'; Length: 20; Trimmed: 42486 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	1	665.4	0	1
+13	2	0.0	1	2
+17	4	0.0	1	3 1
+18	29	0.0	1	1 8 20
+19	397	0.0	1	39 322 36
+20	12916	0.0	2	11841 1017 58
+21	9488	0.0	2	8666 781 41
+22	9379	0.0	2	8481 870 28
+23	10139	0.0	2	9579 538 22
+24	125	0.0	2	74 50 1
+25	3	0.0	2	2 1
+30	1	0.0	2	1
+51	1	0.0	2	1
+52	1	0.0	2	1
+
+
+=== First read: Adapter 2 ===
+
+Sequence: TACCCGCTGAACTTAAGCAT; Type: regular 3'; Length: 20; Trimmed: 19 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Bases preceding removed adapters:
+  A: 0.0%
+  C: 10.5%
+  G: 47.4%
+  T: 42.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	2	665.4	0	2
+14	1	0.0	1	1
+20	1	0.0	2	1
+21	1	0.0	2	1
+22	2	0.0	2	1 1
+23	7	0.0	2	7
+36	1	0.0	2	1
+68	1	0.0	2	1
+70	1	0.0	2	1
+72	1	0.0	2	1
+177	1	0.0	2	1
+
+
+=== Second read: Adapter 3 ===
+
+Sequence: ATGCTTAAGTTCAGCGGGTA; Type: regular 5'; Length: 20; Trimmed: 41751 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	7	665.4	0	7
+4	2	166.3	0	2
+8	1	0.6	0	1
+11	1	0.0	1	1
+12	5	0.0	1	3 2
+13	2	0.0	1	1 1
+14	6	0.0	1	2 4
+16	4	0.0	1	4
+17	4	0.0	1	4
+18	37	0.0	1	3 2 32
+19	439	0.0	1	31 353 55
+20	12534	0.0	2	9362 2865 307
+21	9644	0.0	2	8746 830 68
+22	7625	0.0	2	6957 613 55
+23	11027	0.0	2	9751 1169 107
+24	248	0.0	2	129 109 10
+25	8	0.0	2	1 3 4
+46	1	0.0	2	1
+47	4	0.0	2	1 1 2
+48	2	0.0	2	1 0 1
+49	2	0.0	2	2
+50	4	0.0	2	2 0 2
+51	2	0.0	2	0 1 1
+53	4	0.0	2	1 2 1
+54	3	0.0	2	1 0 2
+55	5	0.0	2	3 0 2
+56	5	0.0	2	0 3 2
+57	10	0.0	2	2 2 6
+58	8	0.0	2	1 1 6
+59	10	0.0	2	0 6 4
+60	16	0.0	2	1 7 8
+61	20	0.0	2	2 5 13
+62	13	0.0	2	2 4 7
+63	12	0.0	2	1 6 5
+64	17	0.0	2	4 8 5
+65	9	0.0	2	1 0 8
+66	3	0.0	2	0 1 2
+67	5	0.0	2	0 0 5
+86	1	0.0	2	0 0 1
+93	1	0.0	2	0 0 1
+
+
+=== Second read: Adapter 4 ===
+
+Sequence: AACAACCCTGAACCAGACGT; Type: regular 3'; Length: 20; Trimmed: 350 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20 bp: 2
+
+Bases preceding removed adapters:
+  A: 89.4%
+  C: 0.3%
+  G: 3.7%
+  T: 6.6%
+  none/other: 0.0%
+WARNING:
+    The adapter is preceded by 'A' extremely often.
+    The provided adapter sequence could be incomplete at its 5' end.
+    Ignore this warning when trimming primers.
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	13	665.4	0	13
+4	308	166.3	0	308
+5	14	41.6	0	14
+13	1	0.0	1	1
+20	7	0.0	2	7
+21	3	0.0	2	3
+22	2	0.0	2	2
+23	1	0.0	2	1
+75	1	0.0	2	1
+
+
+WARNING:
+    One or more of your adapter sequences may be incomplete.
+    Please see the detailed output above.
