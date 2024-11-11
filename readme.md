@@ -39,7 +39,7 @@ Following the sequencing and assembly of all samples, we bioinformatically poole
 
 #### **Supplementary figure 3 \| Bioinformatic pooling sample identifiers:** 
 
-identifier signifies the sample identifier for the pooling method
+identifier signifies the sample identifier for the pooling method. The green, orange and red represent the additive pooling method (all samples added together without restrictions), the mixed pooling method (must be present in 2/3 samples for the ASV to be included) and the subtractive pooling method (must be present in all three samples for the ASV to be retained). 
 
 ![](images/clipboard-3178431690.png)
 
