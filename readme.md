@@ -1,7 +1,7 @@
 ---
-title: "Lessons learnt from rDNA amplicon metabarcoding"
-author: "Thomas Stocker"
-date: "11-11-2024"
+title: **"Lessons learnt from rDNA amplicon metabarcoding"**
+author: **"Thomas Stocker"**
+date: **"11-11-2024"**
 # if needed: bibliography: "references.bib"
 ---
 
