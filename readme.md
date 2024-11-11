@@ -25,7 +25,7 @@ All five cows were amplified in three replicates (P1 - P3), using two primer set
 
 The file name for the fasta files are present in the first column, The \*\*\* denotes the sample number, with EF013 being C13, all the way to EF017 being C17. Identifier signifies the sample identifier for the pooling method.
 
-![](images/clipboard-285113729.png)
+### ![](images/clipboard-285113729.png)
 
 ### **Bioinformatic methods:**
 
