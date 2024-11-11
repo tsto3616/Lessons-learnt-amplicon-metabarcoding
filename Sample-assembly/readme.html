@@ -366,11 +366,11 @@ greatly saves time - instead of manual processing. But before we get
 into any coding, here is the brief description of the samples.</p>
 <div id="samples" class="section level2">
 <h2><strong>Samples:</strong></h2>
-<p>As discussed in the “Main” branch, the samples are labeled EF***_L1
-to EF***_L14, with EF*** representing the cow’s identifier, and the _L1
-to L14 denoting the primer used for amplification and the pooling method
-employed. This is visually explained in Supplementary figure 2 (below
-and in the “Main” branch”).</p>
+<p>As discussed in the “Main” branch, the samples are labeled EF***L-1
+to EF***L-14, with EF*** representing the cow’s identifier, and the L-1
+to L-14 denoting the primer used for amplification and the pooling
+method employed. This is visually explained in Supplementary figure 2
+(below and in the “Main” branch”).</p>
 <div id="supplmentary-figure-2-sample-identifiers-and-corresponding-sample-names" class="section level3">
 <h3><strong>Supplmentary figure 2 |</strong> <strong>Sample identifiers
 and corresponding sample names:</strong></h3>
@@ -397,7 +397,16 @@ processing.</p>
 <h2><strong>Sample processing and assigning taxonomy:</strong></h2>
 <p>This section of the branch involves the assembly of samples -
 assembling the read library and aligning it to a reference library
-through assignTaxonomy().</p>
+through assignTaxonomy(). The first step involves loading the sequences
+into R, by calling path your folder with your sequences. Change
+“Nemabiome_sequences” to your file location for the sequences. The
+second piece of code involves identifying the forward and reverse reads,
+which are labelled here by the end of the file name. For each sample
+there is a</p>
+<pre><code>path &lt;-&quot;Nemabiome_sequences&quot;
+
+fwd_files &lt;- sort(list.files(path, pattern = &quot;R1&quot;, full.names = TRUE)) 
+rev_files &lt;- sort(list.files(path, pattern = &quot;R2&quot;, full.names = TRUE))</code></pre>
 </div>
 </div>
 

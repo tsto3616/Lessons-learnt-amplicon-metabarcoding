@@ -16,7 +16,7 @@ This branch deals with the assembly of the samples but also the automated renami
 
 ## **Samples:**
 
-As discussed in the "Main" branch, the samples are labeled EF\*\*\*\_L1 to EF\*\*\*\_L14, with EF\*\*\* representing the cow's identifier, and the \_L1 to L14 denoting the primer used for amplification and the pooling method employed. This is visually explained in Supplementary figure 2 (below and in the "Main" branch").
+As discussed in the "Main" branch, the samples are labeled EF\*\*\*L-1 to EF\*\*\*L-14, with EF\*\*\* representing the cow's identifier, and the L-1 to L-14 denoting the primer used for amplification and the pooling method employed. This is visually explained in Supplementary figure 2 (below and in the "Main" branch").
 
 ### **Supplmentary figure 2 \|** **Sample identifiers and corresponding sample names:**
 
@@ -42,4 +42,11 @@ Now that the libraries have been loaded we can proceed into sample processing.
 
 ## **Sample processing and assigning taxonomy:**
 
-This section of the branch involves the assembly of samples - assembling the read library and aligning it to a reference library through assignTaxonomy().
+This section of the branch involves the assembly of samples - assembling the read library and aligning it to a reference library through assignTaxonomy(). The first step involves loading the sequences into R, by calling path your folder with your sequences. Change "Nemabiome_sequences" to your file location for the sequences. The second piece of code involves identifying the forward and reverse reads, which are labelled here by the end of the file name. For each sample there is a
+
+```         
+path <-"Nemabiome_sequences"
+
+fwd_files <- sort(list.files(path, pattern = "R1", full.names = TRUE)) 
+rev_files <- sort(list.files(path, pattern = "R2", full.names = TRUE))
+```
