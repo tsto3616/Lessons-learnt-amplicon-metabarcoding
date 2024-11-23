@@ -14,11 +14,7 @@ bibliography: references.bib
 
 ---
 
-<<<<<<< Updated upstream:readme.md
 # **Welcome to the sample assembly branch:**
-=======
-# **Experimental design**
->>>>>>> Stashed changes:Main/readme.md
 
 **Welcome to the Sample assembly branch**
 
@@ -30,11 +26,7 @@ As discussed in the "Main" branch, the samples are labeled EF\*\*\*L-1 to EF\*\*
 
 ### **Supplmentary figure 2 \|** **Sample identifiers and corresponding sample names:**
 
-<<<<<<< Updated upstream:readme.md
 ![](images/clipboard-285113729.png)
-=======
-# **Laboratory methods:**
->>>>>>> Stashed changes:Main/readme.md
 
 ## **Loading the necessary libraries:**
 
@@ -56,22 +48,14 @@ Now that the libraries have been loaded we can proceed into sample processing.
 
 ## **Sample processing and assigning taxonomy:**
 
-<<<<<<< Updated upstream:readme.md
 This section of the branch involves the assembly of samples - assembling the read library and aligning it to a reference library through assignTaxonomy(). The first step involves loading the sequences into R, by calling path your folder with your sequences. Change "Nemabiome_sequences" to your file location for the sequences. The second piece of code involves identifying the forward and reverse reads, which are labelled here by the end of the file name.
-=======
-# **Bioinformatic preparations:**
->>>>>>> Stashed changes:Main/readme.md
 
 ```         
 path <-"<path to sequence files>"
 
-<<<<<<< Updated upstream:readme.md
 fwd_files <- sort(list.files(path, pattern = "R1", full.names = TRUE)) 
 rev_files <- sort(list.files(path, pattern = "R2", full.names = TRUE))
 ```
-=======
-#### **Supplementary figure 3 \| Bioinformatic pooling sample identifiers:**
->>>>>>> Stashed changes:Main/readme.md
 
 Now we place all our names into vector so that the code knows what to look for: Then we apply said vector to the original files. Now our files have their proper names.
 
@@ -91,22 +75,14 @@ Now we move onto trimming of reads based on the primer binding sites, for this w
 fwd_primer <- "ACGTCTGGTTCAGGGTTGTT"
 fwd_primer_rev <- as.character(reverseComplement(DNAStringSet(fwd_primer)))
 
-<<<<<<< Updated upstream:readme.md
 # NEMA2 Primer
 rev_primer <- "ATGCTTAAGTTCAGCGGGTA"
 rev_primer_rev <- as.character(reverseComplement(DNAStringSet(rev_primer)))
 ```
-=======
-# **Analyses of the data:**
->>>>>>> Stashed changes:Main/readme.md
 
 ### \***Supplementary figure 4 \| Primer binding sites for the rDNA of *Haemonchus contortus* (ON677958):**
 
-<<<<<<< Updated upstream:readme.md
 The red arrows represents the NEMA1 primer and the blue arrows represent the NEMA2 primers. Due to the nested location of the primers we can amplify identical ASVs by trimming for the forward NEMA1 primer and the reverse NEMA2 primer.
-=======
-# spare graphs - included in body of text:
->>>>>>> Stashed changes:Main/readme.md
 
 ![](images/clipboard-224740683.png)
 
