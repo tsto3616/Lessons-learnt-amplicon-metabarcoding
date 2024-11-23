@@ -1,4 +1,8 @@
-------------------------------------------------------------------------
+---
+bibliography: references.bib
+---
+
+---
 
 title: "Sample assembly"
 
@@ -8,7 +12,7 @@ date: "11-11-2024"
 
 bibliography: references.bib
 
-------------------------------------------------------------------------
+---
 
 <<<<<<< Updated upstream:readme.md
 # **Welcome to the sample assembly branch:**
@@ -46,7 +50,6 @@ library(ggplot2)
 library(stringr) 
 library(readr)
 library(tidyverse)
-library(openxlsx)
 ```
 
 Now that the libraries have been loaded we can proceed into sample processing.
@@ -97,7 +100,7 @@ rev_primer_rev <- as.character(reverseComplement(DNAStringSet(rev_primer)))
 # **Analyses of the data:**
 >>>>>>> Stashed changes:Main/readme.md
 
-### **Supplementary figure 4 \| Primer binding sites for the rDNA of *Haemonchus contortus* (ON677958):**
+### \***Supplementary figure 4 \| Primer binding sites for the rDNA of *Haemonchus contortus* (ON677958):**
 
 <<<<<<< Updated upstream:readme.md
 The red arrows represents the NEMA1 primer and the blue arrows represent the NEMA2 primers. Due to the nested location of the primers we can amplify identical ASVs by trimming for the forward NEMA1 primer and the reverse NEMA2 primer.
@@ -105,7 +108,7 @@ The red arrows represents the NEMA1 primer and the blue arrows represent the NEM
 # spare graphs - included in body of text:
 >>>>>>> Stashed changes:Main/readme.md
 
-![](images/Screenshot 2024-11-12 112120.png)
+![](images/clipboard-224740683.png)
 
 We then count and trim the primers with the code below.
 
@@ -190,86 +193,3 @@ filtered_out <- filterAndTrim(
   multithread = FALSE, truncLen=c(200,200)
   )  
 ```
-
-Then plot the error profiles to double check the data all looks appropriate, then incorporate it into the data:
-
-```         
-err_fwd <- learnErrors(fwd_filt, multithread = FALSE)
-err_rev <- learnErrors(rev_filt, multithread = FALSE)
-
-plotErrors(err_fwd, nominalQ = TRUE)
-
-dada_fwd <- dada(fwd_filt, err = err_fwd, multithread = FALSE)
-dada_rev <- dada(rev_filt, err = err_rev, multithread = FALSE)
-```
-
-Now just to assembly the data, there is no need for editing:
-
-```         
-mergers <- mergePairs(
-  dadaF = dada_fwd,
-  dadaR = dada_rev,
-  derepF = fwd_filt,
-  derepR = rev_filt,
-  maxMismatch = 1, 
-  verbose=TRUE)
-
-seqtab <- makeSequenceTable(mergers)
-dim(seqtab) 
-
-seqtab_nochim <- removeBimeraDenovo(seqtab, method = "consensus", multithread = FALSE, verbose = TRUE)
-dim(seqtab_nochim)
-
-table(nchar(getSequences(seqtab_nochim)))
-```
-
-This function returns the number of ASVs:
-
-```         
-getN <- function(x) sum(getUniques(x))
-```
-
-This provides us with a detailed account of how many reads were lost and at what step!
-
-```         
-track <- cbind(
-  filtered_out, 
-  sapply(dada_fwd, getN), 
-  sapply(dada_rev, getN), 
-  sapply(mergers, getN), 
-  rowSums(seqtab_nochim))
-  
-colnames(track) <- c("raw", "filtered", "denoised_fwd", "denoised_rev", "merged", "no_chim")
-rownames(track) <- samples  
-head(track)
-
-write.csv(track, file = "nemabiome_track.csv")
-```
-
-Now for the preparation of the dataset:
-
-```         
-TSeqtab_nochim <- as.data.frame(t(seqtab_nochim))
-TSeqtab_nochim$variant<-1:nrow(TSeqtab_nochim)
-Tseqtab_nochim<-as.matrix(Tseqtab_nochim)
-print(Tseqtab_nochim)
-
-rownames(Tseqtab_nochim) <- paste0("ASV", 1:nrow(Tseqtab_nochim))
-colnames(Tseqtab_nochim) <- paste0("Sample", 1:ncol(Tseqtab_nochim))
-Tseqtab_nochim
-```
-
-This piece of code assigns the taxonomy/ species/ locus
-
-```         
-Taxa <- assignTaxonomy(seqtab_nochim,"C:/Users/tsto3616/Downloads/NEMA_USYD_ITS2_Database_assignTax_v3.fa",taxLevels = c("Locus", "Genus", "Species", "Subsp/Strain"), verbose = TRUE, minBoot = 50, multithread=FALSE, tryRC=TRUE) 
-print(Taxa)
-
-tax.augmented <- data.frame(Taxa, (Tseqtab_nochim), stringsAsFactors=FALSE)
-
-write.xlsx(tax.augmented, file="ASVs_raw_masterfiles.xlsx")
-```
-
-## **Automated dataframe manipulation for a cleaner dataset!**
-
-THis involves the appropriate variables being assigned to the dataset in seperate columns (eg. pooling, primer, cow) and the cleaning of the ASV labels so that the names are consistent with scientific species names (eg *Haemonchus contortus*).
